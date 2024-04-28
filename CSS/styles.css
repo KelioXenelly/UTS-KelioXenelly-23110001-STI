@@ -1,0 +1,1085 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.2);
+  }
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+  
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--black);
+    border-radius: 10rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+
+/* Header Section Start */
+
+header {
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo a {
+    display: flex; 
+    align-items: center; 
+    gap: 1.2rem; 
+    text-decoration: none;
+}
+
+header .logo a img {
+    width: 7rem;
+    height: auto;
+    border-radius: 100%;
+}
+
+header .logo a span {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+header .navbar a,
+header .navbar .btn-dropdown {
+    font-size: 1.7rem;
+    margin-inline: .5rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    color: #666;
+    background: none;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+}
+
+header .navbar a:hover,
+header .navbar .btn-dropdown:hover {
+    background-color: var(--green);
+    color: #fff;
+}
+
+header .navbar a.active,
+header .navbar .btn-dropdown.active {
+    background-color: var(--green);
+    color: #fff;
+}
+
+header .navbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header .navbar .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+header .navbar .dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #f7f7f7;
+}
+
+header .navbar .dropdown:hover .dropdown-content a {
+    display: block;
+    padding-block: 1.5rem;
+    padding-inline: 1rem;
+}
+
+header .navbar .dropdown:hover .dropdown-content a:hover {
+    background-color: rgba(223, 220, 220, 0.5);
+    color: #666;
+    padding-left: 1.5rem;
+}
+
+#menu-bars {
+    font-size: 1.7rem;
+    display: none;
+    padding: 1.4rem;
+    border-radius: 50%;
+    background-color: #eee;
+    cursor: pointer;
+    margin-inline: .25rem;
+}
+
+#search-icon {
+    display: inline-block;
+    font-size: 1.7rem;
+    padding: 1.4rem;
+    border-radius: 50%;
+    background-color: #eee;
+    cursor: pointer;
+    margin-inline: .25rem;
+}
+
+#menu-bars:hover,
+#search-icon:hover {
+    transform: rotate(360deg);
+    background: var(--green);
+    color: #fff;
+}
+
+/* Header Section End */
+
+/* Home Page Start */
+
+.homepage {
+    padding: 10rem 7%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homepage .main-content {
+    align-self: center;
+    flex: 1 1 40rem;
+}
+
+.homepage .main-content h2 {
+    font-size: 2.5rem;
+    color: var(--green);
+    font-weight: 400;
+    text-transform: none;    
+}
+
+.homepage .main-content h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--black);
+}
+
+.homepage .main-content p {
+    font-size: 2rem;
+    color: var(--light-color);
+    text-transform: none;
+}
+
+.homepage .main-image {
+    flex: 1 1 45rem;
+    align-self: center;
+    text-align: end;
+}
+
+.homepage .main-image img,
+.homepage-about .hpabout-image img {
+    width: 55rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homepage-about,
+.homepage-services {
+    padding: 5rem 7%;
+    background-color: #fff;
+    height: auto;
+}
+
+.container {
+    background-color: #f7f7f7;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--black);
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: .2rem solid #192a56;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.homepage-about .box-container .hpabout-image {
+    flex: 1 1 20rem;
+}
+
+.homepage-about .box-container .hpabout-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-about .box-container .hpabout-content {
+    flex: 1 1 45rem;
+}
+
+.homepage-about .box-container .hpabout-content h3 {
+    font-size: 3rem;
+    color: var(--green);
+    margin-bottom: .5rem;
+}
+
+.homepage-about .box-container .hpabout-content h2 {
+    font-size: 2.1rem;
+    color: var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+}
+
+.homepage-about .box-container .hpabout-content p {
+    color: var(--light-color);
+    font-size: 1.8rem;
+    border-bottom: .2rem solid var(--black);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    line-height: 1.5;
+}
+
+.homepage-about .hpabout-content .hpabout-biodata {
+    display: flex;
+}
+
+.homepage-about .hpabout-content .hpabout-biodata .col1 {
+    flex: 1 1 40rem;
+    font-size: 1.8rem;
+    text-transform: none;
+}
+
+.homepage-about .hpabout-content .hpabout-biodata .col2 {
+    flex: 1 1 45rem;
+    font-size: 1.8rem;
+    text-transform: none;
+}
+
+.cv-btn:hover {
+    letter-spacing: normal;
+}
+
+.homepage-services .container .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 1.5rem;
+}
+
+.box {
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    padding: 3rem;
+    cursor: pointer;
+}
+
+.box:hover {
+background-color: rgba(170, 170, 170, 0.1);
+}
+
+.box i {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: var(--green);
+}
+
+.box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.box p {
+    font-size: 1.5rem;
+}
+
+/* Home Page End */
+
+/* My Profile Start */
+
+.about-myprofile {
+    padding: 12rem 7%;
+    background-color: #fff;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 3.5rem 4rem;
+    width: 75%;
+}
+
+.about-myprofile .profile-container h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--black);
+    border-bottom: .2rem solid var(--black);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+.about-myprofile .profile-container .profile-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.about-myprofile .profile-container .profile-box img {
+    width: 40%;
+    object-fit: cover;
+    border-radius: 50%;
+    gap: 1.5rem;
+}
+
+.table-profile {
+    text-align: start;
+    width: 100%;
+    font-size: 1.7rem;
+    border-collapse: collapse;
+    padding-bottom: 1rem;
+}
+
+.table-profile td {
+    padding: 1rem;
+    text-transform: none;
+}
+
+.profile-contact {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.profile-contact .cv-btn {
+    width: 50%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/* My Profile End */
+
+/* My Hobby Start */
+
+.my-hobby,
+.my-skills,
+.my-experience,
+.my-achievement,
+.my-education,
+.sti,
+.contact-me {
+    padding: 12rem 7%;
+    background-color: #fff;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-hobby h1 {
+    text-align: start;
+    font-size: 4rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+.my-hobby .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 8rem;
+}
+
+.my-hobby .box-container .image-hobby {
+    flex: 1 1 15rem;
+}
+
+.my-hobby .box-container .image-hobby img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.my-hobby .box-container .hobby-content {
+    flex: 1 1 45rem;
+}
+
+.my-hobby .box-container .hobby-content h2 {
+    font-size: 3.5rem;
+    color: var(--green);
+    margin-bottom: 1rem;
+}
+
+.my-hobby .box-container .hobby-content p {
+    font-size: 1.8rem;
+    color: var(--light-color);
+    text-transform: none;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.my-hobby .box-container .hobby-content h3 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.my-hobby .box-container .hobby-content .box-content {
+    display: flex;
+    font-size: 1.7rem;
+}
+
+.my-hobby .box-container .hobby-content .box-content .col1 {
+    flex: 1 1 45rem;
+}
+
+.my-hobby .box-container .hobby-content .box-content .col2 {
+    flex: 1 1 45rem;
+}
+
+.my-hobby .box-container .hobby-content .box-content li {
+    padding: .3rem;
+}
+
+.my-hobby .even .image-hobby {
+    order: 1;
+}
+
+/* My Hobby End */
+
+/* My Skills Start */
+
+.box-non {
+    cursor: default;
+}
+
+.box-non:hover {
+    background: #fff;
+}
+
+.my-skills h1 {
+    text-align: start;
+    font-size: 4rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    border-bottom: .2rem solid var(--black);
+    text-align: center;
+    width: 100%;
+}
+
+.my-skills .box-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.my-skills .box-container .box {
+    width: 30rem;
+    flex: 1 1 33rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.my-skills .box-container .box img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.my-skills .box-container .box h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: var(--green);
+}
+
+.my-skills .box-container .box p {
+    line-height: 2;
+    padding-bottom: .5rem;
+}
+
+.order-btn {
+    width: 100%;
+    font-size: 2rem;
+}
+
+.order-btn:hover {
+    letter-spacing: normal;
+}
+
+/* My Skills End */
+
+/* My Experience Start */
+
+.my-experience h1 {
+    text-align: start;
+    font-size: 4rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    border-bottom: .2rem solid var(--black);
+    text-align: center;
+    width: 100%;
+}
+
+.my-experience .experience-content {
+    margin-inline: 15rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 2rem 4rem;
+    line-height: 1.5;
+    margin-bottom: 8rem;
+    border-radius: .5rem;
+}
+
+.my-experience .experience-content .experience-image {
+    display: flex;
+    justify-content: center;
+    margin-block: 1rem;
+    flex: 1 1 90rem;
+}
+
+.my-experience .experience-content .experience-image img {
+    width: 65%;
+    object-fit: cover;
+}
+
+.my-experience .experience-content h2 {
+    font-size: 3rem;
+    color: var(--green);
+}
+
+.my-experience .experience-content h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: .5rem;
+}
+
+.my-experience .experience-content p {
+    font-size: 1.8rem;
+    text-transform: none;
+}
+
+/* My Experience End */
+
+/* My Achievement Start */
+
+.my-achievement h1 {
+    text-align: start;
+    font-size: 4rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+.my-achievement .box-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-achievement .box-container .box {
+    flex: 1 1 33rem;
+    border: none;
+    padding: 0;
+}
+
+.my-achievement .box-container .box img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+    height: 211.58px;
+}
+
+.my-achievement .box-container .box h2 {
+    color: var(--green);
+}
+
+.my-achievement .box-container .box h3 {
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+}
+
+.my-achievement .box-container .box h3 i {
+    font-size: 2rem;
+}
+
+.box-act {
+    cursor: pointer;
+}
+
+/* My Achievement End */
+
+/* My Education Start */
+
+.my-education h1 {
+    text-align: start;
+    font-size: 4rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+.my-education .box-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-education .box-container .box-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1.5rem;
+}
+
+.my-education .box-container .box-inline .img-education {
+    flex: 1 1 5rem;
+}
+
+.my-education .box-container .box-inline .img-education img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.my-education .box-container .box-inline .education-content {
+    flex: 1 1 70rem;
+}
+
+.my-education .box-container .box-inline .education-content h2 {
+    font-size: 3rem;
+    text-transform: none;
+    color: var(--green);
+}
+
+.my-education .box-container .box-inline .education-content h3 {
+    font-size: 2.3rem;
+    text-transform: none;
+}
+
+/* My Education End */
+
+/* ITBSS & STI Start */
+
+.itbss {
+    padding: 7rem 7%;
+}
+
+.background-itbss {
+    padding-top: 8rem;
+}
+
+.background-itbss img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.background-itbss h1 {
+    margin-inline: 7%;
+    padding: 2rem;
+    width: 85%;
+    position: absolute;
+    bottom: 25%;
+    font-size: 5rem;
+    background-color: rgba(255, 255, 255, 1);
+    color: var(--green);
+    text-transform: none;
+}
+
+.itbss {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itbss .box-itbss {
+    flex: 1 1 60rem;
+    padding: 2rem;
+}
+
+.itbss .box-itbss h2 {
+    font-size: 2.7rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+
+.itbss .box-itbss p,
+.itbss .box-itbss li {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    flex: 1 1 45rem;
+    color: var(--light-color);
+}
+
+.itbss .box-itbss li {
+    margin-left: 4rem;
+    line-height: 1.5;
+}
+
+.itbss .box-itbss .p-green {
+    color: var(--green);
+    font-size: 2rem;
+    border-bottom: .3rem solid var(--green);
+    padding-bottom: 2rem;
+}
+
+.itbss .box-itbss h3 {
+    font-size: 2rem;
+    color: var(--light-color);
+    margin-block: 2rem;
+}
+
+.itbss .logo  {
+    flex: 1 1 25rem;
+    padding: 2rem;
+}
+
+.itbss .logo img {
+    width: 100%;
+}
+
+
+/* ITBSS & STI End */
+
+/* Contact Form Start */
+
+.contact-me {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-me .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    width: 70%;
+    padding: 2rem 3rem;
+}
+
+.contact-me .box-container h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--black);
+    width: 100%;
+}
+
+.contact-me .box-container form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.contact-me .box-container form .question {
+    width: 100%;
+    margin-block: 1rem;
+}
+
+.contact-me .box-container form .question label {
+    font-size: 1.7rem;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.contact-me .box-container form .question input {
+    background-color: #eee;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-me .box-container form .question textarea {
+    width: 100%;
+    resize: none;
+    background-color: #eee;
+    padding: 1rem;
+}
+
+.contact-me .box-container .submit-btn {
+    margin-top: 0;
+    width: 35%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+}
+
+.contact-me .box-container .submit-btn:hover {
+    letter-spacing: normal;
+}
+
+/* Contact Form End */
+
+
+
+
+/* Footer Section Start */
+
+.footer {
+    text-align: center;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    font-size: 2rem;
+    color: #fff;
+    padding: .5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    background: var(--black);
+    padding-block: 3rem;
+  }
+  
+  .footer span {
+    color: var(--green);
+  }
+
+/* Footer Section End */
+
+
+/* Media Queries */
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .homepage .main-image img {
+        width: 50rem;
+    }
+
+    .my-education .box-container .box-inline .img-education {
+        flex: 1 1 15rem;
+    }
+    
+    .my-education .box-container .box-inline .education-content {
+        flex: 1 1 60rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem 3%;
+    }
+
+    .homepage .main-content h2 {
+        font-size: 2rem;
+    }
+    
+    .homepage .main-content h1 {
+        font-size: 4.5rem;
+    }
+    
+    .homepage .main-content p {
+        font-size: 2rem;
+    }
+
+    .homepage .main-image img {
+        width: 45rem;
+    }
+
+    .homepage .main-content {
+        flex: 1 1 25rem;
+    }
+
+    .homepage .main-image {
+        flex: 1 1 45rem;
+    }
+
+    .my-experience .experience-content {
+        margin-inline: 10rem;
+    }
+
+    .my-hobby .box-container .image-hobby {
+        flex: 1 1 25rem;
+    }
+    
+    .my-hobby .box-container .hobby-content {
+        flex: 1 1 45rem;
+    }
+    
+    .my-education .box-container .box-inline .img-education {
+        flex: 1 1 5rem;
+    }
+
+    .background-itbss h1 {
+        margin-inline: 3%;
+        width: 93.5%;
+        bottom: 68%;
+    }
+    
+    .background-itbss img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+
+    .itbss  {
+        padding-inline: 3%;
+    }
+
+    .my-experience .experience-content .experience-image img {
+        width: 80%;
+    }
+
+    .my-education .box-container .box-inline .img-education {
+        flex: 1 1 20rem;
+    }
+    
+    .my-education .box-container .box-inline .education-content {
+        flex: 1 1 50rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+    
+    #menu-bars {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: .5rem;
+        border-bottom: none;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+    header .navbar.active {
+        right: 0;
+        opacity: 1;
+    }
+
+    .homepage {
+        margin-bottom: 2rem;
+    }
+
+    .homepage .main-content {
+        margin-top: 2rem;
+        flex: 1 1 45rem;
+    }
+
+    .homepage .main-image {
+        flex: 1 1 45rem;
+    }
+
+    .homepage .main-image img {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .cv-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .profile-contact .cv-btn {
+        width: 100%;
+    }
+    
+    .profile-container {
+        width: 95%;
+    }
+
+    .my-hobby .even .image-hobby {
+        order: 0;
+    }
+
+    .my-experience .experience-content {
+        margin-inline: 0;
+    }
+
+    .background-itbss h1 {
+        width: 93.5%;
+        bottom: 64%;
+    }
+
+    .contact-me .box-container {
+        width: 85%;
+    }
+
+    .my-experience .experience-content .experience-image img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 425px) {
+    header .navbar a,
+    header .navbar .btn-dropdown {
+        font-size: 1.2rem;
+    }
+
+    html {
+        font-size: 45%;
+    }
+
+    .contact-me .box-container {
+        width: 90%;
+    }
+}
+
