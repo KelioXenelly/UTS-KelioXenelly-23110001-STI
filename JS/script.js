@@ -19,7 +19,7 @@ window.onscroll = () => {
 let cv = document.getElementById("downloadCV");
 
 cv.onclick = () => {
-  window.location.href="http://127.0.0.1:5500/assets/Curriculum Vitae - Kelio Xenelly.pdf"
+  window.location.href="https://kelioxenelly.github.io/UTS-KelioXenelly-23110001-STI/assets/Curriculum Vitae - Kelio Xenelly.pdf"
 };
 
 // Download CV End
